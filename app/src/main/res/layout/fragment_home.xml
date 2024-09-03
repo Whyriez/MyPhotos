@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:text="Albums" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleFolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_folder"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:text="Photos" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_photo"
+                />
+        </LinearLayout>
+
+       <!-- <ImageButton
+            android:id="@+id/btnAdd"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_btn_circle"
+            android:layout_width="70dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_add"
+            android:layout_height="70dp"/>-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/blue_200"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_add"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_uploadPhoto"
+            android:layout_above="@id/btnAdd"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/blue_200"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="35dp"
+            android:src="@drawable/ic_photo"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_createAlbum"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_uploadPhoto"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/blue_200"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="35dp"
+            android:src="@drawable/ic_album"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
